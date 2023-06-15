@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import  { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
+import { MustMatch } from './_helpers/must-match.validator';
 
 @Component({
     selector: 'app-root',
@@ -50,7 +51,7 @@ export class AppComponent implements OnInit {
     Edit(userId: number) {
 
         this.buttonText = "Update";
-        this.dbops = DBOperation.create;
+        this.dbops = DBOperation.update;
 
         let user = this.users.find( (u: User) => u.id === userId );
         this.registerForm.patchValue(user);
@@ -88,7 +89,7 @@ export class AppComponent implements OnInit {
                 this._userService.updateUser(this.registerForm.value).subscribe(res => {
                     this.getAllUsers();
                     this.onCancel();
-                    this._toastr.success("User Updated", )
+                    this._toastr.success("User Updated !!", "User Registration")
                 })
                 break;
         }
@@ -117,7 +118,7 @@ export class AppComponent implements OnInit {
             password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
             confirmPassword: ['', Validators.compose([Validators.required])],
             acceptTerms: [false, Validators.compose([Validators.requiredTrue])]
-        })
+        });
     }
 
 
