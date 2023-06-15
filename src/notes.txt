@@ -21,3 +21,6 @@ Swal.fire({
         )
     }
 })
+
+// Angular In Memory web Api package installation command from npm js.com, --save-dev save package info  on development dependencies.
+npm i angular-in-memory-web-api --save-dev
