@@ -2,6 +2,3 @@
 <button class="btn btn-primary me-3">Submit Primary</button>
 <button class="btn btn-success me-3">Submit Success</button>
 <button class="btn btn-danger me-3">Submit Danger</button>
-
-<i class="fa fa-edit me-3"></i>
-<i class="fa fa-trash-o me-3"></i>
