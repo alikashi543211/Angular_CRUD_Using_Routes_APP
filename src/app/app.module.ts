@@ -8,10 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        AddUserComponent,
+        ListUserComponent
     ],
     imports: [
         BrowserModule,
